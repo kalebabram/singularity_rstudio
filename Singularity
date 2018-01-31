@@ -3,9 +3,6 @@ From: kalebabram/singularity_r
  
 %labels
 
-%setup
-
-
 %help
   This will run RStudio Server
 
