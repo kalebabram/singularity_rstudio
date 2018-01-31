@@ -4,8 +4,7 @@ From: kalebabram/singularity_r
 %labels
 
 %setup
-  mkdir ${SINGULARITY_ROOTFS}/home/rstudio
-  cp /home/vagrant/Build_Files/* ${SINGULARITY_ROOTFS}/home/rstudio
+
 
 %help
   This will run RStudio Server
