@@ -2,7 +2,7 @@ Bootstrap: shub
 From: kalebabram/singularity_r
  
 %help
-  This will run RStudio Server
+  This will run RStudio server
 
 %environment
   export PATH=/usr/lib/rstudio-server/bin:${PATH}
