@@ -1,8 +1,8 @@
-BootStrap: shub
+Bootstrap: shub
 From: kalebabram/singularity_r
  
 %labels
-
+  RStudio_version 1.1.419
 %help
   This will run RStudio Server
 
@@ -17,7 +17,7 @@ From: kalebabram/singularity_r
 
 %post
   # Software versions
-  export RSTUDIO_VERSION=1.1.419
+  export RSTUDIO_LATEST=$(wget --no-check-certificate -qO- https://s3.amazonaws.com/rstudio-server/current.ver)
 
   # Install RStudio Server
   apt-get update
@@ -28,7 +28,7 @@ From: kalebabram/singularity_r
   wget \
     --no-verbose \
     -O rstudio-server.deb \
-    "https://download2.rstudio.org/rstudio-server-${RSTUDIO_VERSION}-amd64.deb"
+    "https://download2.rstudio.org/rstudio-server-${RSTUDIO_LATEST}-amd64.deb"
   gdebi -n rstudio-server.deb
   rm -f rstudio-server.deb
 
