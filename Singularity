@@ -1,16 +1,8 @@
 Bootstrap: shub
 From: kalebabram/singularity_r
  
-%labels
-  RStudio_version 1.1.419
 %help
   This will run RStudio Server
-
-%apprun rserver
-  exec rserver "${@}"
-
-%runscript
-  exec rserver "${@}"
 
 %environment
   export PATH=/usr/lib/rstudio-server/bin:${PATH}
@@ -34,3 +26,12 @@ From: kalebabram/singularity_r
 
   # Clean up
   rm -rf /var/lib/apt/lists/*
+
+%labels
+  RStudio_version 1.1.419
+
+%apprun rserver
+  exec rserver "${@}"
+
+%runscript
+  exec rserver "${@}"
