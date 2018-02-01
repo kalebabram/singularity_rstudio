@@ -25,8 +25,8 @@ From: kalebabram/singularity_r
   rm -f rstudio-server.deb
 
   # run install scripts
-  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/RNAmmer_1.0.tar.gz && mv RNAmmer_1.0.tar.gz ${SINGULARITY_ROOTFS}/home
-  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/Prodigal_2.0.tar.gz && mv RNAmmer_1.0.tar.gz ${SINGULARITY_ROOTFS}/home
+  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/RNAmmer_1.0.tar.gz && mv RNAmmer_1.0.tar.gz /home
+  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/Prodigal_2.0.tar.gz && mv RNAmmer_1.0.tar.gz /home
   wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/build.R && mv build.R ${SINGULARITY_ROOTFS}/home
   chmod 777 /home/build.R
   Rscript /home/build.R
