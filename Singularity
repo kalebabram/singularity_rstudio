@@ -23,7 +23,10 @@ From: kalebabram/singularity_r
     "https://download2.rstudio.org/rstudio-server-${RSTUDIO_LATEST}-amd64.deb"
   gdebi -n rstudio-server.deb
   rm -f rstudio-server.deb
-
+  # run install scripts
+  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/RNAmmer_1.0.tar.gz && mv RNAmmer_1.0.tar.gz ${SINGULARITY_ROOTFS}/home
+  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/Prodigal_2.0.tar.gz && mv RNAmmer_1.0.tar.gz ${SINGULARITY_ROOTFS}/home
+  wget 
   # Clean up
   rm -rf /var/lib/apt/lists/*
 
