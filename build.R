@@ -23,6 +23,6 @@ biocLite("GenomicRanges")
 biocLite("msa")
 biocLite("rentrez")
 
-install.packages("/home/Prodigal_2.0.tar.gz", repos = NULL, type = "source")
-install.packages("/home/RNAmmer_1.0.tar.gz", repos = NULL, type = "source")
+install.packages("/Prodigal_2.0.tar.gz", repos = NULL, type = "source")
+install.packages("/RNAmmer_1.0.tar.gz", repos = NULL, type = "source")
 
