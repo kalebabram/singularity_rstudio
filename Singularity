@@ -26,7 +26,9 @@ From: kalebabram/singularity_r
   # run install scripts
   wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/RNAmmer_1.0.tar.gz && mv RNAmmer_1.0.tar.gz ${SINGULARITY_ROOTFS}/home
   wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/Prodigal_2.0.tar.gz && mv RNAmmer_1.0.tar.gz ${SINGULARITY_ROOTFS}/home
-  wget 
+  wget https://raw.githubusercontent.com/kalebabram/singularity_rstudio/master/build.R && mv build.R ${SINGULARITY_ROOTFS}/home
+  chmod 777 /home/build.R
+  Rscript /home/build.R
   # Clean up
   rm -rf /var/lib/apt/lists/*
 
